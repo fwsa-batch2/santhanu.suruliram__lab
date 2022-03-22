@@ -8,23 +8,22 @@
 5. tour_package
 6. trip_list
 
-``` syntax
-mysql> show tables;
-+--------------------+
+``` sql
+ show tables;
+
 | Tables_in_tourtube |
-+--------------------+
+|:-------------------|
 | customers          |
 | feedback           |
 | payment            |
 | reg_users          |
 | tour_package       |
 | trip_list          |
-+--------------------+
 6 rows in set (0.01 sec)
 ```
-
+***
 | Tables_in_tourtube |
-|--------------------|
+|:-------------------|
 | customers          |
 | feedback           |
 | payment            |
@@ -33,29 +32,29 @@ mysql> show tables;
 | trip_list          |
 
 ### Creating of Database Tables;
-``` syntax
-mysql> create table customers(cus_id int primary key, name varchar(20) not null, phone bigint not null);
+``` sql
+ create table customers(cus_id int primary key, name varchar(20) not null, phone bigint not null);
 ```
-``` syntax
-mysql> create table feedback (fb_id int primary key, fb_user varchar(20), msg text(300) not null, fb_email varchar(50) not null);
+``` sql
+ create table feedback (fb_id int primary key, fb_user varchar(20), msg text(300) not null, fb_email varchar(50) not null);
 ```
-```syntax
-mysql> create table payment(pay_id int primary key, amount int not null, pay_type varchar(20) not null, status varchar(10) default 'not-paid');
+```sql
+ create table payment(pay_id int primary key, amount int not null, pay_type varchar(20) not null, status varchar(10) default 'not-paid');
 ```
-``` syntax
-mysql> create table reg_users (id int primary key, name varchar(20) unique not null, email varchar(50) unique not null, phone bigint unique not null, dob date not null, password varchar(30) not null);
+``` sql
+ create table reg_users (id int primary key, name varchar(20) unique not null, email varchar(50) unique not null, phone bigint unique not null, dob date not null, password varchar(30) not null);
 ```
-``` syntax
-mysql> create table tour_package (pack_id int primary key, package_name varchar(20) unique not null, cover_img varchar(100) unique not null, cover_text text);
+``` sql
+ create table tour_package (pack_id int primary key, package_name varchar(20) unique not null, cover_img varchar(100) unique not null, cover_text text);
 ```
-``` syntax
-mysql> create table trip_list (id int primary key, customer_id int unique not null, place varchar(20) unique not null, pay_id int unique, passenger_count int, date_of_boarding date , date_of_ending date);
+``` sql
+ create table trip_list (id int primary key, customer_id int unique not null, place varchar(20) unique not null, pay_id int unique, passenger_count int, date_of_boarding date , date_of_ending date);
 ```
 
 ***
 ### Customers Table:
-``` syntax
-mysql> desc customers;
+``` sql
+ desc customers;
 +--------+-------------+------+-----+---------+-------+
 | Field  | Type        | Null | Key | Default | Extra |
 +--------+-------------+------+-----+---------+-------+
@@ -73,8 +72,8 @@ mysql> desc customers;
 | phone  | bigint      | NO   |     | NULL    |       |
 
 ***
-``` syntax
-mysql> select * from customers;
+``` sql
+ select * from customers;
 +--------+------------+------------+
 | cus_id | name       | phone      |
 +--------+------------+------------+
@@ -93,8 +92,8 @@ mysql> select * from customers;
 ***
 
 ### Feedback Table:
-``` syntax
-mysql> desc feedback
+``` sql
+ desc feedback
     -> ;
 +----------+--------------+------+-----+---------+-------+
 | Field    | Type         | Null | Key | Default | Extra |
@@ -114,8 +113,8 @@ mysql> desc feedback
 | msg      | varchar(300) | NO   |     | NULL    |       |
 | fb_email | varchar(50)  | NO   |     | NULL    |       |
 ***
-``` syntax
-mysql> select * from feedback;
+``` sql
+ select * from feedback;
 +-------+---------+-------------------------------------------+-----------------------+
 | fb_id | fb_user | msg                                       | fb_email              |
 +-------+---------+-------------------------------------------+-----------------------+
@@ -131,8 +130,8 @@ mysql> select * from feedback;
 |     2 | Guna    | Your website has some bugs, kindly fix it | gunavenlin@gmail.com  |
 *** 
 ### Payment Table:
-``` syntax
-mysql> desc payment;
+``` sql
+ desc payment;
 +----------+-------------+------+-----+----------+-------+
 | Field    | Type        | Null | Key | Default  | Extra |
 +----------+-------------+------+-----+----------+-------+
@@ -151,8 +150,8 @@ mysql> desc payment;
 | pay_type | varchar(20) | NO   |     | NULL     |       |
 | status   | varchar(10) | YES  |     | not-paid |       |
 
-``` syntax
-mysql> select * from payment;
+``` sql
+ select * from payment;
 +--------+--------+-------------+--------+
 | pay_id | amount | pay_type    | status |
 +--------+--------+-------------+--------+
@@ -170,8 +169,8 @@ mysql> select * from payment;
 ***
 
 ### reg_users Table:
-``` syntax
-mysql> desc reg_users;
+``` sql
+ desc reg_users;
 +----------+-------------+------+-----+---------+-------+
 | Field    | Type        | Null | Key | Default | Extra |
 +----------+-------------+------+-----+---------+-------+
@@ -194,8 +193,8 @@ mysql> desc reg_users;
 | dob      | date        | NO   |     | NULL    |       |
 | password | varchar(30) | NO   |     | NULL    |       |
 
-``` syntax
-mysql> select * from reg_users;
+``` sql
+ select * from reg_users;
 +----+----------+---------------------------+------------+------------+------------+
 | id | name     | email                     | phone      | dob        | password   |
 +----+----------+---------------------------+------------+------------+------------+
@@ -218,8 +217,8 @@ mysql> select * from reg_users;
 ***
 
 ### tour_package Table:
-``` syntax
-mysql> desc tour_package;
+``` sql
+ desc tour_package;
 +--------------+--------------+------+-----+---------+-------+
 | Field        | Type         | Null | Key | Default | Extra |
 +--------------+--------------+------+-----+---------+-------+
@@ -238,8 +237,8 @@ mysql> desc tour_package;
 | cover_img    | varchar(100) | NO   | UNI | NULL    |       |
 | cover_text   | text         | YES  |     | NULL    |       |
 
-``` syntax
-mysql> select * from tour_package;
+``` sql
+ select * from tour_package;
 +---------+--------------+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | pack_id | package_name | cover_img                                                                                 | cover_text
                                                                                                                                                                           |
@@ -255,8 +254,8 @@ mysql> select * from tour_package;
                                                                                                                                    
 ### trip_list Table:
 
-``` syntax
-mysql> desc trip_list;
+``` sql
+ desc trip_list;
 +------------------+-------------+------+-----+---------+-------+
 | Field            | Type        | Null | Key | Default | Extra |
 +------------------+-------------+------+-----+---------+-------+
@@ -281,8 +280,8 @@ mysql> desc trip_list;
 | date_of_boarding | date        | YES  |     | NULL    |       |
 | date_of_ending   | date        | YES  |     | NULL    |       |
 
-``` syntax
-mysql> select * from trip_list;
+``` sql
+ select * from trip_list;
 +----+-------------+--------+--------+-----------------+------------------+----------------+
 | id | customer_id | place  | pay_id | passenger_count | date_of_boarding | date_of_ending |
 +----+-------------+--------+--------+-----------------+------------------+----------------+
@@ -297,5 +296,11 @@ mysql> select * from trip_list;
 |  1 |           1 | Hawaii |      1 |               3 | 0000-00-00       | 0000-00-00     |
 |  2 |           2 | Kerala |      2 |               2 | 0000-00-00       | 0000-00-00     |
 ***
+
+## ER Model for TourTube Database:
+![alt er-model-tt](tourtube-db-er.png)
+***
+## ER Model (workbench):
+![alt er-model-tt-workbench](tt-er-workbench.png)
 
 
