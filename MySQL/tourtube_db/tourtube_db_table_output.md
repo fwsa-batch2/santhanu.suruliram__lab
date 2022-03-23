@@ -298,7 +298,7 @@
 ***
 
 ## ER Model for TourTube Database:
-![alt er-model-tt](tourtube-db-er.png)
+![alt er-model-tt](tourtube-er.png)
 ***
 ## ER Model (workbench):
 ![alt er-model-tt-workbench](tt-er-workbench.png)
