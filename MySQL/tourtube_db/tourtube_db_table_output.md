@@ -52,6 +52,50 @@
 ```
 
 ***
+### Insertion of Data into Tables:
+``` sql
+insert into customers values(1, 'Sanboi', 8870522547), (2, GunaVenlin, 6387628723), (3, Abimanyu, 7654321981);
+```
+
+``` sql 
+insert into feedback values(1, 'Sanboi', 'Your service is good', 'santhanu236@gmail.com'), 
+                           (2, 'Guna', 'Your website has some bugs, kindly fix it', 'gunavenlin@gmail.com');
+```
+
+``` sql
+insert into payment values(1, 45000, 'card', 'paid'), (2, 23000, 'net-banking', 'paid');
+```
+
+``` sql
+insert into reg_users values(1, 'Sanboi', 'santhanu236@gmail.com', 8870522547, 2002-22-15, 'password01').
+                            (2, 'Guna', 'gunavenlin@gmail.com', 6388763542, 0000-00-00, 'password02'),
+                            (3, 'Abimanyu', 'abimanyuabi@gmail.com', 8765432982, 0000-00-00, 'password03'),
+                            (4, 'Javid', 'javithegangster@gmail.com', 7654321988, 0000-00-00, 'password04'),
+                            (5, 'Komal', 'komalkishan@gmail.com', 8765432198, 0000-00-00, 'password05');
+```
+
+``` sql
+insert into reg_users values(1, 'Sanboi', 'santhanu236@gmail.com', 8870522547, 2002-22-15, 'password01').
+                            (2, 'Guna', 'gunavenlin@gmail.com', 6388763542, 0000-00-00, 'password02'),
+                            (3, 'Abimanyu', 'abimanyuabi@gmail.com', 8765432982, 0000-00-00, 'password03'),
+                            (4, 'Javid', 'javithegangster@gmail.com', 7654321988, 0000-00-00, 'password04'),
+                            (5, 'Komal', 'komalkishan@gmail.com', 8765432198, 0000-00-00, 'password05');
+
+```
+
+``` sql
+insert into tour_package values(1, 'Hawaii', 'http://cdn.cnn.com/cnnnext/dam/assets/201230100452-10-2021-travel-destinations-hawaii.jpg', 'Hawaii is a state in the Western United States, located in the Pacific Ocean about 2,000 miles from the U.S. mainland. It is the only state outside North America, the only state that is an archipelago, and the only state in the tropics'),
+(2, 'Maldives', 'https://image.com/maldives.png', 'Maldives, officially the Republic of Maldives, is an archipelagic country in the Indian subcontinent of Asia, situated in the Indian Ocean. It lies southwest of Sri Lanka and India, about 750 kilometres from the Asian continents mainland.'),
+(3, 'Kerala', ' https://image.com/kerala.png', ' Kerala, a state on Indias tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. Its known for its palm-lined beaches and backwaters, a network of canals.'),
+(4, 'Switzerland', 'https://image.com/swizz.png', 'Switzerland is a mountainous Central European country, home to numerous lakes, villages and the high peaks of the Alps.'),
+(5, 'Shimla', 'https://image.com/shimla.png', 'Shimla is the capital of the northern Indian state of Himachal Pradesh, in the Himalayan foothills.');
+```
+
+``` sql
+insert into trip_list values(1, 1, 'Hawaii', 1, 3, 0000-00-00, 0000-00-00),
+(2, 2, 'Kerala', 2, 2, 0000-00-00, 0000-00-00);
+
+```
 ### Customers Table:
 ``` sql
  desc customers;
