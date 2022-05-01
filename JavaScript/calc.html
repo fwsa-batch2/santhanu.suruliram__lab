@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="calc.css">
+    
+</head>
+<body>
+<div id="main">
+<input type="text" id="workArea" placeholder="0">
+<table>
+<tr>
+    <td><button class="operation1" onclick="clearall()">AC</button></td>  
+    <td><button class="operation1" onclick="del()"><img id="delimg" src="del_btn.png"></button></td> 
+    <td><button class="operation1" onclick="assign('%')">%</button></td>
+    <td><button class="operation2" onclick="assign('/')">&#247;</button></td>
+</tr>
+<tr>
+    <td><button class="numbers" onclick="assign('7')">7</button></td>
+    <td><button class="numbers" onclick="assign('8')">8</button></td>
+    <td><button class="numbers" onclick="assign('9')">9</button></td>
+    <td><button class="operation2" onclick="assign('*')">x</button></td>
+</tr>
+<tr>
+    <td><button class="numbers" onclick="assign('4')">4</button></td>
+    <td><button class="numbers" onclick="assign('5')">5</button></td>
+    <td><button class="numbers" onclick="assign('6')">6</button></td>
+    <td><button class="operation2" onclick="assign('-')">-</button></td>
+</tr>
+<tr>
+    <td><button class="numbers" onclick="assign('1')">1</button></td>
+    <td><button class="numbers" onclick="assign('2')">2</button></td>
+    <td><button class="numbers" onclick="assign('3')">3</button></td>
+    <td><button class="operation2" onclick="assign('+')">+</button></td>
+</tr>
+</table>
+<button class="numbers" style="width: 200px; border-radius: 50px; text-align: left; padding-left: 40px;" onclick="assign('0')">0</button>
+<button class="numbers" onclick="assign('.')">.</button>
+<button class="operation2" onclick="calc()">=</button>
+</div>
+
+<script type="text/javascript" src="calc.js"></script>
+</body>
+</html>

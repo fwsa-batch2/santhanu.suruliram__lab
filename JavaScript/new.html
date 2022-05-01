@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blueviolet;
+            padding-left: 20%;
+            padding-top: 15%;
+            }
+        input {
+            border-radius: 15px;   border: none;
+            height: 40px; 
+        }
+        select {
+            height: 40px; width: 30px;
+            border-radius: 15px;
+        }
+        button {
+            height: 40px;
+        }
+        
+    </style>
+    <script type="text/javascript" src="new.js">
+    </script>
+</head>
+<body>
+
+    <form onsubmit="submit_handler()">
+    <h1>Simple Calculator:</h1>
+    <input id="in1" placeholder="first number" >  
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">x</option>
+        <option value="/">/</option>
+    </select>
+    <input id="in2" placeholder="second number">
+    <button type="submit">=</button>  
+    
+    <p id="ans"></p>
+</form>
+
+</body>
+</html>
