@@ -57,9 +57,9 @@
 insert into customers values(1, 'Sanboi', 8870522547), (2, GunaVenlin, 6387628723), (3, Abimanyu, 7654321981);
 ```
 
-``` sql 
-insert into feedback values(1, 'Sanboi', 'Your service is good', 'santhanu236@gmail.com'), 
-                           (2, 'Guna', 'Your website has some bugs, kindly fix it', 'gunavenlin@gmail.com');
+``` sql
+insert into feedback values(1, 'Sanboi', 'Your service is good', '__'),
+                           (2, 'Guna', 'Your website has some bugs, kindly fix it', '__');
 ```
 
 ``` sql
@@ -67,19 +67,19 @@ insert into payment values(1, 45000, 'card', 'paid'), (2, 23000, 'net-banking', 
 ```
 
 ``` sql
-insert into reg_users values(1, 'Sanboi', 'santhanu236@gmail.com', 8870522547, 2002-22-15, 'password01').
-                            (2, 'Guna', 'gunavenlin@gmail.com', 6388763542, 0000-00-00, 'password02'),
-                            (3, 'Abimanyu', 'abimanyuabi@gmail.com', 8765432982, 0000-00-00, 'password03'),
-                            (4, 'Javid', 'javithegangster@gmail.com', 7654321988, 0000-00-00, 'password04'),
-                            (5, 'Komal', 'komalkishan@gmail.com', 8765432198, 0000-00-00, 'password05');
+insert into reg_users values(1, 'Sanboi', '____', ____, __, 'password01').
+                            (2, 'Guna', '__', __, 0000-00-00, 'password02'),
+                            (3, 'Abimanyu', '__', __, 0000-00-00, 'password03'),
+                            (4, 'Javid', '__', __, 0000-00-00, 'password04'),
+                            (5, 'Komal', '__', __, 0000-00-00, 'password05');
 ```
 
 ``` sql
-insert into reg_users values(1, 'Sanboi', 'santhanu236@gmail.com', 8870522547, 2002-22-15, 'password01').
-                            (2, 'Guna', 'gunavenlin@gmail.com', 6388763542, 0000-00-00, 'password02'),
-                            (3, 'Abimanyu', 'abimanyuabi@gmail.com', 8765432982, 0000-00-00, 'password03'),
-                            (4, 'Javid', 'javithegangster@gmail.com', 7654321988, 0000-00-00, 'password04'),
-                            (5, 'Komal', 'komalkishan@gmail.com', 8765432198, 0000-00-00, 'password05');
+insert into reg_users values(1, 'Sanboi', '__', __, 2002-22-15, 'password01').
+                            (2, 'Guna', '__', __, 0000-00-00, 'password02'),
+                            (3, 'Abimanyu', '__', __, 0000-00-00, 'password03'),
+                            (4, 'Javid', '__', __, 0000-00-00, 'password04'),
+                            (5, 'Komal', '__', __, 0000-00-00, 'password05');
 
 ```
 
@@ -172,7 +172,7 @@ insert into trip_list values(1, 1, 'Hawaii', 1, 3, 0000-00-00, 0000-00-00),
 |-------|---------|-------------------------------------------|-----------------------|
 |     1 | Sanboi  | Your service is good                      | santhanu236@gmail.com |
 |     2 | Guna    | Your website has some bugs, kindly fix it | gunavenlin@gmail.com  |
-*** 
+***
 ### Payment Table:
 ``` sql
  desc payment;
@@ -295,7 +295,7 @@ insert into trip_list values(1, 1, 'Hawaii', 1, 3, 0000-00-00, 0000-00-00),
 +---------+--------------+-------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 5 rows in set (0.01 sec)
 ```
-                                                                                                                                   
+
 ### trip_list Table:
 
 ``` sql
